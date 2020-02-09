@@ -1,5 +1,10 @@
 
 # Kubernetes
 
-## A little theory & a little practice
-Author: Vinay Hegde
+From the terminal, pop in:
+
+  ```yo reveal:slide "Slide Title"```
+
+Available options:
+
+ ```--markdown --attributes --notes```
