@@ -1,1 +1,10 @@
-
+<h2>Kubernetes Concepts (continued...)</h2>
+<ul class="fragment" style="list-style-type:square;">
+  <li>Volumes</li>
+  <p><a href="https://kubernetes.io/docs/concepts/storage/volumes/">Volumes</a> are used to persist data beyond the life of a container. They are especially important for stateful applications like Redis and Postgres.</p>
+  <ol>  
+    <li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">PersistentVolume</a> defines a storage volume independent of the normal Pod-lifecycle. It's managed outside of the particular Pod that it resides in.</li>
+    <li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims">PersistentVolumeClaim</a> is a request to use the PersistentVolume by a user.</li>
+  </p>
+</ul>  
+  
