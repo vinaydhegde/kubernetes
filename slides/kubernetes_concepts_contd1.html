@@ -1,11 +1,15 @@
 <h2>Kubernetes Concepts (continued...)</h2>
-<p class="fragment">
-<h6>Services</h6>
-<p>A <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Service</a> is a logical set of Pods that perform a similar function. It enables load balancing and service discovery. It's an abstraction layer over the Pods; Pods are meant to be ephemeral while services are much more persistent.</p>
-</p>
+
+<ul class="fragment" style="list-style-type:square;">
+  <li><h6>Services</h6></li>
+  <p>A <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Service</a> is a logical set of Pods that perform a similar function. It enables load balancing and service discovery. It's an abstraction layer over the Pods; Pods are meant to be ephemeral while services are much more persistent.</p>
+<ul>  
+
+<ul class="fragment" style="list-style-type:square;">  
+  <li><h6>Deployments</h6></li>
+  <p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Deployments</a> are used to describe (via config file) the desired state of Kubernetes. They dictate how Pods are created, deployed, and replicated.</p>
+</ul>  
 
 <p class="fragment">
-<h6>Deployments</h6>
-<p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Deployments</a> are used to describe (via config file) the desired state of Kubernetes. They dictate how Pods are created, deployed, and replicated.</p>
+<img src="slides/images/kubernetes-service-pod.png" alt="service-pod" style="width:600px;height:300px;"/>
 </p>
-<img src="slides/images/kubernetes-service-pod.png" alt="service-pod" style="width:600px;height:600px;" />
