@@ -68,7 +68,7 @@ body {
  * OTHER
  *********************************************/
 .reveal p {
-  margin: 15px 0;
+  /*margin: 15px 0;*/
   line-height: 1.0; }
 
 /* Ensure certain elements are never larger than the slide itself */
