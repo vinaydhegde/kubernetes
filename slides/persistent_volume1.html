@@ -17,3 +17,12 @@ spec:
     path: "/data/db-pv"
 </code></pre>    
 </section>
+
+<p>Create the volume:</p>
+<pre><code data-trim data-noescape>
+$ kubectl apply -f ./k8s/devopstree-pv.yml
+</code></pre>
+View details:
+<pre><code data-trim data-noescape>
+$ kubectl get pods
+</code></pre>
