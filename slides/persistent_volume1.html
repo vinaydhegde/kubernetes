@@ -1,1 +1,17 @@
 <h2>Volume - Persistent Volume</h2>
+<section>
+  apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: db-pv
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 2Gi
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/db-pv"
+</section>
