@@ -1,0 +1,10 @@
+<h2>Kubernetes Architecture</h2>
+
+<p class="fragment">
+<img src="slides/images/kubernetes-components.png" alt="kubernetes Architecture" style="width:600px;height:300px;" />
+</p>  
+
+<ul style="list-style-type:square;">
+  <li class="fragment">The <h6>master node</h6>, which hosts the Kubernetes Control Plane that controls and managaes the whole Kubernetes system. It runs 3 processes: kube-apiserver, kube-controller-manager and kube-scheduler.</li>  
+  <li class="fragment"><h6>Worker nodes</h6> that run the actual applications you deploy. It runs 2 processes: kubelet (which communicates with the Kuberenetes master) and kube-proxy</li>
+</ul>
