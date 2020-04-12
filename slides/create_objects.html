@@ -1,21 +1,20 @@
 <h2>Creating Objects</h2>
-<p>To create a new <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">object</a> in Kubernetes, you must provide a "spec" that describes its desired state. We'll be using YAML files for this. Example:</p>
+<p>To create a new <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">object</a> in Kubernetes, you must provide a "spec" that describes its desired state. We'll be using YAML files for this.</br>Example:</p>
 <code class="fragment"> 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: devopstree-react
-spec:
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: devopstree-react
-    spec:
-      containers:
-      - name: devopstree-react
-      - image: vinaydhegde/devopstree-react:latest
-```
+apiVersion: apps/v1</br>
+kind: Deployment</br>
+metadata:</br>
+  name: devopstree-react</br>
+spec:</br>
+  replicas: 1</br>
+  template:</br>
+    metadata:</br>
+      labels:</br>
+        app: devopstree-react</br>
+    spec:</br>
+      containers:</br>
+      - name: devopstree-react</br>
+      - image: vinaydhegde/devopstree-react:latest</br>
 </code>  
 
 <ol class="fragment">
