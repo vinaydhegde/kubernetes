@@ -1,1 +1,27 @@
 <h2>Volume - Persistent Volume Claim</h2>
+<section>
+<pre><code data-trim data-noescape>
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: db-pvc
+  labels:
+    type: local
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  volumeName: db-pv
+  storageClassName: standard
+</code></pre>    
+</section>
+<p>Create volume claim:</p>
+<pre><code data-trim data-noescape>
+$ kubectl apply -f ./k8s/devopstree-pvc.yml
+</code></pre>
+View details:
+<pre><code data-trim data-noescape>
+$ kubectl get pvc
+</code></pre>
