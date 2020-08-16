@@ -1,5 +1,6 @@
 <h2>Volume - Persistent Volume Claim</h2>
-<section>
+<div class="fragment">
+<p>k8s/devopstree-pvc.yml</p> 
 <pre><code data-trim data-noescape>
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -16,12 +17,18 @@ spec:
   volumeName: db-pv
   storageClassName: standard
 </code></pre>    
-</section>
+</div>
+
+<div class="fragment">  
 <p>Create volume claim:</p>
 <pre><code data-trim data-noescape>
 $ kubectl apply -f ./k8s/devopstree-pvc.yml
 </code></pre>
+</div>
+  
+<div class="fragment">  
 View details:
 <pre><code data-trim data-noescape>
 $ kubectl get pvc
 </code></pre>
+</div>
