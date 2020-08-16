@@ -1,1 +1,53 @@
 <h2>Ingress</h2>
+
+<div class="fragment">
+<p></br>k8s/devopstree-minikube-ingress.yml:</p>
+<pre><code data-trim data-noescape>
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: minikube-ingress
+  annotations:
+spec:
+  rules:
+  - host: devops-tree
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: devopstree-react
+          servicePort: 8080
+      - path: /devopstree
+        backend:
+          serviceName: devopstree-flask
+          servicePort: 5000
+</code></pre>    
+</div>
+
+<div class="fragment">
+<p>Enable the Ingress addon:</p> 
+<pre><code data-trim data-noescape>
+$ minikube addons enable ingress
+</code></pre>
+</div>  
+
+<div class="fragment">
+<p>Create the Ingress object:</p> 
+<pre><code data-trim data-noescape>
+$ kubectl apply -f ./k8s/devopstree-minikube-ingress.yml
+</code></pre>
+</div>  
+
+<div class="fragment">
+<p>Add an entry to /etc/hosts:</p> 
+<pre><code data-trim data-noescape>
+$ echo "$(minikube ip) devops-tree" | sudo tee -a /etc/hosts
+</code></pre>
+</div>  
+
+
+<div class="fragment">
+<p>Try it out:</p> 
+<p>http://devops-tree/devopstree</p>
+</div>
+
