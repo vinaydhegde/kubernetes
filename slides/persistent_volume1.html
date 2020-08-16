@@ -1,5 +1,5 @@
 <h2>Volume - Persistent Volume</h2>
-<p class="fragment">
+<section>
 <p>k8s/devopstree-pv.yml:</p>
 <pre><code data-trim data-noescape>
   apiVersion: v1
@@ -18,17 +18,20 @@ spec:
     path: "/data/db-pv"
 </code></pre>    
 </p>
+</section>
 
-<p class="fragment">
+<section>
 <p>Create the volume:</p>
 <pre><code data-trim data-noescape>
 $ kubectl apply -f ./k8s/devopstree-pv.yml
 </code></pre>
 </p>  
+</section>
 
-<p class="fragment">
+<section>
 <p>View details:</p>
 <pre><code data-trim data-noescape>
 $ kubectl get pods
 </code></pre>
-</p>
+</section>  
+
