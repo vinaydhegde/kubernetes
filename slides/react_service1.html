@@ -1,1 +1,27 @@
 <h2>React Service</h2>
+
+<div class="fragment">
+<p></br>k8s/devopstree-service-react.yml:</p>
+<pre><code data-trim data-noescape>
+apiVersion: v1
+kind: Service
+metadata:
+  name: devopstree-react
+  labels:
+    service: devopstree-react
+  name: devopstree-react
+spec:
+  selector:
+    app: devopstree-react
+  ports:
+  - port: 8080
+    targetPort: 8080
+</code></pre>    
+</div>
+
+<div class="fragment">
+<p>Create the Service</p> 
+<pre><code data-trim data-noescape>
+$ kubectl create -f ./k8s/devopstree-service-react.yml
+</code></pre>
+</div>  
