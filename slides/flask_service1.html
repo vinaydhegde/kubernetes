@@ -1,1 +1,26 @@
 <h2>Flask Service</h2>
+
+<div class="fragment">
+<p></br>kubernetes/devopstree-service-flask.yml:</p>
+<pre><code data-trim data-noescape>
+apiVersion: v1
+kind: Service
+metadata:
+  name: devopstree-flask
+  labels:
+    service: devopstree-flask
+spec:
+  selector:
+    app: devopstree-flask
+  ports:
+  - port: 5000
+    targetPort: 5000
+</code></pre>    
+</div>
+
+<div class="fragment">
+<p>Create the Service</p>
+<pre><code data-trim data-noescape>
+kubectl create -f ./k8s/devopstree-service-flask.yml
+</code></pre>
+</div>  
